@@ -5,13 +5,21 @@ input_ranges = "492410748-492568208,246-390,49-90,16-33,142410-276301,54304-1079
 ranges = input_ranges.split(",")
 count_invalid_ids = 0
 
+
 for i in ranges:
     j = (i.split("-")[0])
     o = (i.split("-")[1])
 
+
     for k in range(int(j),int(o)+1):
-        l = len(str(k)) // 2
-        if (str(k)[:l]) == (str(k)[l:]):
-            count_invalid_ids += k
+        if len(str(k)) == 2:
+            if (str(k)[0]) == (str(k)[1]):
+                count_invalid_ids += k
+        else:
+            l = len(str(k))//2
+            if (str(k)[:l]) == (str(k)[l:]):
+                count_invalid_ids += k
+
+
 
 print(count_invalid_ids)
