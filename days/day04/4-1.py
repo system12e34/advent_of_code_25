@@ -59,27 +59,3 @@ for raw_index, raw_list in enumerate(matrix):
                 total_of_rolls_symbol += 1
 
 print(total_of_rolls_symbol)
-
-
-
-
-
-
-
-
-
-
-        # if list_element == rolls_symbol:
-        #     left_rng_for_check = raw_list[0: val_index]
-        #     left_count_of_rolls_symbol = (np.count_nonzero(left_rng_for_check[-8:] == rolls_symbol))
-        #     right_rng_for_check = raw_list[val_index+1:]
-        #     right_count_of_rolls_symbol = (np.count_nonzero(right_rng_for_check[:8] == rolls_symbol))
-        #     print(right_count_of_rolls_symbol)
-
-
-            # if left_count_of_rolls_symbol <5: #and right_count_of_rolls_symbol <5:
-            #     total_of_rolls_symbol +=1
-
-            #print(total_of_rolls_symbol)
-
-
