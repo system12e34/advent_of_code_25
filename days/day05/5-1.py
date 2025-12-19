@@ -16,16 +16,16 @@ with open(INPUT_PATH_RANGES) as file:
     for line in file:
         input_list_ranges.append(line.strip())
 
-with open(INPUT_PATH_INGREDIENTS_ID) as file_2:
-    for line in file_2:
+with open(INPUT_PATH_INGREDIENTS_ID) as file:
+    for line in file:
         input_list_ingredients_id.append(line.strip())
 
 
-parsed_ranges2: list[tuple[int, int]] = [(int(start), int(end)) for start, end in (r.split("-") for r in input_list_ranges)]
+parsed_ranges: list[tuple[int, int]] = [(int(start), int(end)) for start, end in (r.split("-") for r in input_list_ranges)]
 
 for id in input_list_ingredients_id:
     found: bool = False
-    for ranges in parsed_ranges2:
+    for ranges in parsed_ranges:
         if ranges[0]<= int(id) <= ranges[1]:
             found = True
             break
