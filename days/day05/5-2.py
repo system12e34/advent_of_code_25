@@ -6,11 +6,9 @@ from typing import List
 
 INPUT_PATH_RANGES = Path("./input_ranges.txt")
 
-
 input_list_ranges: List[str] = []
 total_ranges: list = []
 sum_ids: int = 0
-
 
 
 with open(INPUT_PATH_RANGES) as file:
@@ -34,7 +32,6 @@ for start, end in parsed_ranges:
         total_ranges[-1][1] = max(last_end, end)
     else:
         total_ranges.append([start, end])
-
 
 for start, end in total_ranges:
     sum_ids += (end+1) - start
