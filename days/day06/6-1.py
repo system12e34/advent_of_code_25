@@ -1,6 +1,5 @@
 from pathlib import Path
-from traceback import format_list
-from typing import List
+from typing import List, Any
 from functools import reduce
 from operator import mul
 
@@ -8,8 +7,8 @@ from operator import mul
 
 INPUT = Path("./input.txt")
 input_list: List[str] = []
-transpose_list: List[str] = []
-operators: List[str] = []
+transpose_list: List[List[Any]] = []
+operators: str = ""
 sum_elements: int = 0
 total_sum_elements: int = 0
 
